@@ -9,3 +9,5 @@ to do a quick introduction to parser combinators, show how to use a few primitiv
 and show how to implement all the primitives -- each in just a few lines of Go.
 
 Feel free to grab and use this -- I'd recommend copying the code so you can modify it to suit your ends.
+
+The parser API is very loosely inspired by the [parser package](https://package.elm-lang.org/packages/elm/parser/latest/Parser) for the [Elm language](http://elm-lang.org). 
