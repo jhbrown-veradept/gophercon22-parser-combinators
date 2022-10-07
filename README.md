@@ -22,6 +22,8 @@ If you want to get more familiar with this implementation of parser combinators,
 
 ## Simpler
 
+* Add a `Parser[Empty]` named `End` which succeeds only when you have no more input remaining.  Remove the check for remaining input in the `Parse` function and modify the example grammar to use `End` to ensure no input remains.
+
 * Add a function to the `parser` package called `Lookahead` that takes a `Parser[T]` as an argument, and returns a `Parser[T]` which returns the same value as the input parser, but without consuming any input -- in other words, it looks to see if the argument parser matches the upcoming input but doesn't actually consume that input.
 
 * Extend the `state` implementation in `parser` to track line and column numbers, and add a parser function called `GetPosition` that returns the current line and column numbers, while consuming no input.  (This could be used in sequences, say, to get text positions.)
