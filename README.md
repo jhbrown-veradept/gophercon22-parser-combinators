@@ -4,7 +4,7 @@ Parser combinators are a composable way of building parsers in code; they stand 
 They work particularly well in Go now that Go has generics, and they are remarkably easy to implement from scratch. 
 This repo contains a simple parser combinator implementation, and an example of using that to build a parser for a simple configuration language.
 
-I wrote it principally for a [presentation at GopherCon 2022](https://www.gophercon.com/agenda/session/944201), in which my goal was 
+I wrote it principally for a presentation at GopherCon 2022 [(video)](https://www.youtube.com/watch?v=x5p_SJNRB4U) [(slides)](https://docs.google.com/presentation/d/1PfFFXjguakJM13tHWkFxFcy4wee65B26T9Cij2TWC0w/edit#slide=id) [(session announcement)](https://www.gophercon.com/agenda/session/944201), in which my goal was 
 to do a quick introduction to parser combinators, show how to use a few primitives to implement a parser for a microlanguage, 
 and show how to implement all the primitives -- each in just a few lines of Go.
 
