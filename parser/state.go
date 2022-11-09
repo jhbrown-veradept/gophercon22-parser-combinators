@@ -10,7 +10,7 @@ type state struct {
 	offset int    // The current parsing offset into the input string.
 }
 
-// remaining returns the a string which is just the unconsumed input
+// remaining returns the string which is just the unconsumed input.
 func (s state) remaining() string {
 	return s.data[s.offset:]
 }

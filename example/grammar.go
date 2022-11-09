@@ -1,15 +1,15 @@
-// This package provides a Parser that parses a simple configuration file format
-// made up as an example.  Here is a grammar for the configuration format:
+// Package example provides a Parser that parses a simple configuration file format
+// made up as an example. Here is a grammar for the configuration format:
 //
 //	configuration:  '[' whitespace bindings whitespace ']'
 //
 //	bindings: binding | binding whitespace ',' whitespace bindings
 //
-//	binding:  name whitespace '=' whitespace value
+//	binding: name whitespace '=' whitespace value
 //
 //	name: [a-zA-Z][0-9a-zA-Z]*
 //
-//	value:  int | bool
+//	value: int | bool
 //
 //	int: [0-9] | [1-9][0-9]+
 //
@@ -24,7 +24,7 @@ import (
 	. "github.com/jhbrown-veradept/gophercon22-parser-combnators/parser"
 )
 
-// The result of parsing is a slice of Bindings
+// Bindings is the result of parsing is a slice of Bindings.
 type Bindings []Binding
 
 // A Binding corresponds to “name = value”
@@ -41,17 +41,17 @@ type BindingValue interface {
 // BindingInt is a wrapper on int to implement the BindingValue interface.
 type BindingInt int
 
-// The marker method to be a BindingValue
+// IsBindingValue is the marker method to be a BindingValue.
 func (BindingInt) IsBindingValue() {}
 
 // BindingBool is a wrapper on bool to implement the BindingValue interface.
 type BindingBool bool
 
-// The marker method to be a BindingValue
+// IsBindingValue is the marker method to be a BindingValue.
 func (BindingBool) IsBindingValue() {}
 
-// NewConfigParser returns this struct.  The sole exported field is the Parser for the
-// entire configuration format.  The unexported fields contain subcomponent parsers
+// ConfigParsers holds all parsers. The sole exported field is the Parser for the
+// entire configuration format. The unexported fields contain subcomponent parsers
 // for mutual reference and (ideally) internal testing.
 type ConfigParsers struct {
 	trueParser          Parser[bool]
