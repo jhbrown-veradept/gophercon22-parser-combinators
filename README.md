@@ -63,6 +63,8 @@ Because our combinators are implemented as functions, if we use the debugger to 
   
   Now modify all of the parser-generating and combining functions to return various structs implementing the interface.  The debugger should show a stack of method calls on specific struct types now.  Is it more clear?  (Let me know, I haven't yet tried this myself.)
 
-# Feedback appreciated
+# Feedback appreciated, but no PRs please.
 
-I'd be very grateful for any feedback, comments, or questions.
+I'd be very grateful for any feedback, comments, or questions -- DM me, or opoen an issue.
+
+I am not accepting PRs to this repo, please don't submit them, I will just close them.
